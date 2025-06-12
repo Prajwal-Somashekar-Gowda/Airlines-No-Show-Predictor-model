@@ -3,9 +3,13 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+import os
 
-# Load dataset
-df = pd.read_csv("../data/synthetic_flight_passenger_data.csv")
+# Load dataset using path relative to this script so it works when run
+# from any location
+script_dir = os.path.dirname(os.path.abspath(__file__))
+data_path = os.path.join(script_dir, "..", "data", "synthetic_flight_passenger_data.csv")
+df = pd.read_csv(data_path)
 
 # Drop rows with missing Frequent Flyer Status
 df.dropna(subset=["Frequent_Flyer_Status"], inplace=True)
@@ -40,4 +44,5 @@ plt.xticks([0, 1], ['Show', 'No-Show'])
 plt.show()
 
 # Save a light-cleaned version
-df.to_csv("../data/cleaned_flight_passenger_data.csv", index=False)
+clean_path = os.path.join(script_dir, "..", "data", "cleaned_flight_passenger_data.csv")
+df.to_csv(clean_path, index=False)
