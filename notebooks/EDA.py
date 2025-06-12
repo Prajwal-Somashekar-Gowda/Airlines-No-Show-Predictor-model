@@ -1,4 +1,4 @@
-# 📊 Light EDA Notebook for Airline No-Show Prediction
+#  Light EDA Notebook for Airline No-Show Prediction
 
 import pandas as pd
 import matplotlib.pyplot as plt
