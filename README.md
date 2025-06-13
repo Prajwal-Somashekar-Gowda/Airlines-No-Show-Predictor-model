@@ -41,7 +41,7 @@ Airlines overbook flights to counter passenger no-shows. However, inaccurate for
 ### Step-by-step:
 ```bash
 # 1. Navigate to root folder
-cd No_Show_project
+cd Airlines-No-Show-Predictor-model
 
 # 2. Install dependencies if needed
 pip install -r requirements.txt  
